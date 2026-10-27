@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>嘉義市私立嘉華高級中學 - 專題研究報告</title>
+  <style>
+    * { box-sizing: border-box; font-family: "Microsoft JhengHei", Arial, sans-serif; }
+    body { margin: 0; padding: 0; background-color: #f1f5f9; color: #1e293b; line-height: 1.6; }
+    
+    /* 置頂導覽列 */
+    header { position: sticky; top: 0; background: #1e3a8a; color: white; padding: 12px 20px; z-index: 1000; box-shadow: 0 2px 8px rgba(0,0,0,0.15); display: flex; justify-content: space-between; align-items: center; }
+    header h1 { margin: 0; font-size: 20px; font-weight: bold; }
+    nav a { color: #ffffff; text-decoration: none; margin-left: 15px; font-size: 15px; font-weight: bold; transition: color 0.2s; }
+    nav a:hover { color: #38bdf8; }
+
+    /* 單頁 A4 模擬容器 */
+    .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+    .card { background: white; border-radius: 8px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 5px solid #0284c7; }
+    
+    .cover-card { text-align: center; background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%); border-top: 5px solid #1e3a8a; padding: 50px 20px; }
+    .cover-title { font-size: 32px; font-weight: bold; color: #1e3a8a; margin-bottom: 10px; }
+    .cover-subtitle { font-size: 20px; color: #0284c7; margin-bottom: 30px; font-weight: bold; }
+    .cover-info { background: white; display: inline-block; padding: 20px 40px; border-radius: 8px; text-align: left; box-shadow: 0 2px 6px rgba(0,0,0,0.05); font-size: 16px; }
+
+    h2 { font-size: 22px; color: #1e3a8a; border-bottom: 2px solid #0284c7; padding-bottom: 8px; margin-top: 0; }
+    h3 { font-size: 18px; color: #0369a1; margin-top: 20px; }
+    
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td { border: 1px solid #cbd5e1; padding: 10px; text-align: left; font-size: 15px; }
+    th { background-color: #f1f5f9; color: #1e3a8a; font-weight: bold; }
+    tr:nth-child(even) { background-color: #f8fafc; }
+
+    /* 快捷導覽鈕 */
+    .btn-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; margin-top: 15px; }
+    .btn { display: block; background: #0284c7; color: white; text-align: center; padding: 12px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.2s; }
+    .btn:hover { background: #0369a1; }
+
+    .map-box { border: 2px dashed #0284c7; background: #f0f9ff; padding: 15px; text-align: center; border-radius: 6px; }
+    .back-top { display: inline-block; margin-top: 15px; font-size: 14px; color: #0284c7; text-decoration: none; font-weight: bold; }
+
+    @media (max-width: 600px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav { margin-top: 10px; }
+      nav a { margin-left: 0; margin-right: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 置頂導覽列 -->
+  <header>
+    <h1>嘉義市私立嘉華高級中學 專題網頁</h1>
+    <nav>
+      <a href="#toc">目錄</a>
+      <a href="#unit1">基本概況</a>
+      <a href="#unit2">地圖環境</a>
+      <a href="#unit3">國中部</a>
+      <a href="#unit4">高中部</a>
+      <a href="#unit5">升學績效</a>
+      <a href="#unit7">總結</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- 封面區塊 -->
+    <section class="card cover-card" id="cover">
+      <div class="cover-title">嘉義市私立嘉華高級中學</div>
+      <div class="cover-subtitle">學校綜合專題研究與校務發展報告</div>
+      <div class="cover-info">
+        <p><b>報告對象：</b>指導老師</p>
+        <p><b>網頁架構：</b>HTML5 互動式單頁網站</p>
+        <p><b>內容規範：</b>含校園地圖、學制特色、醫藥專班與升學成果</p>
+      </div>
+    </section>
+
+    <!-- 目錄區塊 -->
+    <section class="card" id="toc">
+      <h2>快速導覽目錄 (Table of Contents)</h2>
+      <p>點擊下方按鈕，即可在平板或電腦上自動平滑滾動至該單元：</p>
+      <div class="btn-grid">
+        <a href="#unit1" class="btn">單元一：學校概況與校史 (P.1-3)</a>
+        <a href="#unit2" class="btn">單元二：校園地圖與環境 (P.4-5)</a>
+        <a href="#unit3" class="btn">單元三：國中部學制特色 (P.6-8)</a>
+        <a href="#unit4" class="btn">單元四：高中部四大專班 (P.9-11)</a>
+        <a href="#unit5" class="btn">單元五：升學績效與競賽 (P.12-14)</a>
+        <a href="#unit6" class="btn">單元六：社團與晚自習管理 (P.15-17)</a>
+        <a href="#unit7" class="btn">單元七：交通網絡與總結 (P.18-20)</a>
+      </div>
+    </section>
+
+    <!-- 單元一 -->
+    <section class="card" id="unit1">
+      <h2>單元一：學校基本概況與建校發展</h2>
+      <h3>一、基本資料</h3>
+      <table>
+        <tr><th>項目</th><th>詳細資訊</th></tr>
+        <tr><td><b>學校全銜</b></td><td>財團法人臺灣省嘉義市私立嘉華高級中學</td></tr>
+        <tr><td><b>學校類型</b></td><td>私立完全中學（含國中部、高中部）</td></tr>
+        <tr><td><b>創校時間</b></td><td>1961 年籌設，1964 年正式招生</td></tr>
+        <tr><td><b>創辦人</b></td><td>陳鉛筆 先生（嘉義縣議員）與賴松輝先生等人</td></tr>
+        <tr><td><b>校址</b></td><td>600 嘉義市東區民權路 41 號</td></tr>
+      </table>
+      <h3>二、辦學理念與精神</h3>
+      <ul>
+        <li><b>校訓</b>：禮、義、廉、恥。</li>
+        <li><b>精神標語</b>：活力嘉華·全能飛翔。</li>
+        <li><b>校史沿革</b>：1961 年籌設、1964 年建校（初名嘉義縣私立嘉華高級中學），1983 年因嘉義市升格省轄市更名為現名。取名「嘉華」意為「嘉義之華」。</li>
+      </ul>
+      <a href="#toc" class="back-top">↑ 返回目錄</a>
+    </section>
+
+    <!-- 單元二 -->
+    <section class="card" id="unit2">
+      <h2>單元二：校園平面地圖與地理環境</h2>
+      <h3>一、校園配置地圖</h3>
+      <div class="map-box">
+        <p style="font-weight:bold; color:#1e3a8a;">【 嘉華中學 校園配置示意圖 】</p>
+        <table>
+          <tr>
+            <td style="background:#dbeafe; text-align:center;"><b>北側門</b><br>民權路大門 / 警衛室</td>
+            <td style="background:#eff6ff; text-align:center;"><b>行政與教學區</b><br>行政大樓 / 國中部 / 高中部大樓</td>
+            <td style="background:#dbeafe; text-align:center;"><b>實驗教學區</b><br>科學館 / 理化生物實驗室</td>
+          </tr>
+          <tr>
+            <td style="background:#f1f5f9; text-align:center;"><b>生活區</b><br>學生宿舍 / 餐廳</td>
+            <td style="background:#f8fafc; text-align:center; height:80px;"><b>運動場地</b><br>籃球場 / 排球場 / 操場</td>
+            <td style="background:#f1f5f9; text-align:center;"><b>圖書資訊區</b><br>圖書館 / K書中心 / 電腦教室</td>
+          </tr>
+        </table>
+      </div>
+      <h3>二、地理位置優勢</h3>
+      <p>位於嘉義市東區文教核心，鄰近嘉義公園、國立嘉義高中與市立棒球場，環境安寧適合求學。</p>
+      <a href="#toc" class="back-top">↑ 返回目錄</a>
+    </section>
+
+    <!-- 單元三 -->
+    <section class="card" id="unit3">
+      <h2>單元三：國中部學制與培育特色</h2>
+      <h3>一、特色班別</h3>
+      <ul>
+        <li><b>數理資優/科學班</b>：加強邏輯演算與科學實驗，積極輔導參加科展。</li>
+        <li><b>語文雙語班</b>：引進外師全英語授課，通過全民英檢（GEPT）。</li>
+        <li><b>直升銜接班</b>：國三下學期提前進行高中基礎學科先修。</li>
+      </ul>
+      <h3>二、直升獎學金</h3>
+      <p>提供會考高分直升獎學金與六年一貫學雜費減免優惠。</p>
+      <a href="#toc" class="back-top">↑ 返回目錄</a>
+    </section>
+
+    <!-- 單元四 -->
+    <section class="card" id="unit4">
+      <h2>單元四：高中部課程架構與分流</h2>
+      <h3>一、四大特色專班</h3>
+      <table>
+        <tr><th>專班名稱</th><th>目標領域</th><th>特色輔導</th></tr>
+        <tr><td><b>醫藥衛生專班</b></td><td>醫學系、牙醫、藥學、獸醫</td><td>生化實驗、醫院參訪、醫學倫理面試指導。</td></tr>
+        <tr><td><b>數理理工專班</b></td><td>頂尖電機、資工、機械、材料</td><td>進階數理、專題實作、全國科展培訓。</td></tr>
+        <tr><td><b>人文社會商管班</b></td><td>法律、財金、企管、外文</td><td>商業簡報、閱讀思辨、法學專題。</td></tr>
+        <tr><td><b>雙語國際專班</b></td><td>國內外雙語學程、海外大學</td><td>外師協同教學、托福/雅思輔導。</td></tr>
+      </table>
+      <a href="#toc" class="back-top">↑ 返回目錄</a>
+    </section>
+
+    <!-- 單元五 -->
+    <section class="card" id="unit5">
+      <h2>單元五：升學績效與多元成果</h2>
+      <ul>
+        <li><b>醫藥衛生成果</b>：每年均有考取醫學系、牙醫系、藥學系與中醫系優異表現。</li>
+        <li><b>繁星推薦優勢</b>：繁星推薦錄取率高達 70% 以上，過半數錄取國立大學及醫藥領域。</li>
+        <li><b>競賽表現</b>：多次榮獲嘉義市科展前三名與特優，並代表參加全國科展。</li>
+      </ul>
+      <a href="#toc" class="back-top">↑ 返回目錄</a>
+    </section>
+
+    <!-- 單元六 -->
+    <section class="card" id="unit6">
+      <h2>單元六：校園生活與晚自習管理</h2>
+      <ul>
+        <li><b>夜間自習專案</b>：一人一桌冷氣 K 書位，每晚安排國英數駐點教師現場解惑，實施手機統一保管。</li>
+        <li><b>學生社團</b>：近 40 個學生社團，涵蓋機器人創作、吉他、熱舞、熱血籃球等。</li>
+        <li><b>住宿管理</b>：四人套房宿舍，24小時舍監與門禁卡刷卡管理。</li>
+      </ul>
+      <a href="#toc" class="back-top">↑ 返回目錄</a>
+    </section>
+
+    <!-- 單元七 -->
+    <section class="card" id="unit7">
+      <h2>單元七：交通網絡與總結</h2>
+      <h3>一、校車網絡</h3>
+      <p>路線涵蓋民雄、新港、朴子、竹崎、中埔、水上、太保，以及雲林北港與台南白河跨區線路。</p>
+      <h3>二、報告總結</h3>
+      <p>嘉華中學具備悠久歷史、六年一貫優勢、醫藥理工專班特色與嚴謹管教，是極具競爭力的完全中學。</p>
+      <a href="#toc" class="back-top">↑ 返回目錄</a>
+    </section>
+
+  </div>
+
+</body>
+</html>
